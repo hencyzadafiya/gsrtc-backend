@@ -24,7 +24,9 @@ app.use("/api", bookingRoutes);
 app.use("/api", busRoutes);
 
 app.use(function (req, res, next) {
-  next(createError(404));
+  res.json({
+    message: "Hello i am here, How can help you",
+  });
 });
 
 app.use(function (err, req, res, next) {
